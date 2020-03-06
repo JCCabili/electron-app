@@ -2,6 +2,10 @@ const electron = require('electron');
 const url = require('url');
 const path = require('path');
 
+const Config = require('electron-config');
+const config = new Config();
+// Resources: https://www.youtube.com/watch?v=kN1Czs0m1SU
+
 const {app,BrowserWindow,Menu} = electron;
 
 let mainWindow;
@@ -47,6 +51,8 @@ function createAddWindow(){
         addWindow = null;
     })
 }
+
+
 // Create menu template
 const mainMenuTemplate = [
     {
@@ -56,6 +62,21 @@ const mainMenuTemplate = [
                 label:'Add Item',
                 click(){
                     createAddWindow();
+                }
+            },
+            {
+                label:'Set Config',
+                click(){
+                    console.log('Getting config..');
+                    config.set('unicorn', '🦄');
+    
+                }
+            },
+            {
+                label:'Get Config',
+                click(){
+
+                    console.log('Getting config..',config.get('unicorn'));
                 }
             },
             {
