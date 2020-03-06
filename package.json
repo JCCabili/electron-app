@@ -1,0 +1,14 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Test list desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "JC Cabili",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^8.0.3"
+  }
+}
