@@ -9,7 +9,7 @@
   "author": "JC Cabili",
   "license": "MIT",
   "dependencies": {
-    "electron": "^8.0.3",
+    "electron": "^15.5.5",
     "electron-config": "^2.0.0"
   }
 }
